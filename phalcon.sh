@@ -3,7 +3,7 @@
 ##########################################
 # @package server initialize
 # @author Zeki Ünal <zekiunal@gmail.com>
-# @name quick.sh
+# @name phalcon.sh
 ##########################################
 
 yum update -y
