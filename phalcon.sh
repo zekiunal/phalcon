@@ -6,8 +6,27 @@
 # @name phalcon.sh
 ##########################################
 
-yum update -y
+####################################################################################
+# Install wget
+####################################################################################
+
+if ! rpm -qa | grep -qw wget; then
+    # install wget
+    sudo yum install -y wget 
+    echo "wget installed."
+fi
+
+####################################################################################
+# Update CentOS
+####################################################################################
+
 rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
+sudo yum update -y
+
+
 yum install -y httpd
 chkconfig httpd on
 
