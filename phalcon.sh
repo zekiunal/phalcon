@@ -89,6 +89,21 @@ if ! rpm -qa | grep -qw git-core; then
     echo "git installed."
 fi
 
+if ! rpm -qa | grep -qw gd; then
+    sudo yum install -y gd
+    echo "gd installed."
+fi
+
+if ! rpm -qa | grep -qw gd-devel; then
+    sudo yum install -y gd-devel
+    echo "gd-devel installed."
+fi
+
+if ! rpm -qa | grep -qw php55w-gd; then
+    sudo yum install -y php55w-gd
+    echo "php55w-gd installed."
+fi
+
 if [ ! -f /usr/lib64/php/modules/phalcon.so ]; then
     git clone git://github.com/phalcon/cphalcon.git
     cd cphalcon/build
