@@ -22,6 +22,7 @@ fi
 sudo yum update -y
 rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+sudo yum update -y
 
 
 yum install -y httpd
