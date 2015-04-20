@@ -39,34 +39,34 @@ mkdir /etc/httpd/conf/virtualhosts
 
 echo "Apache installed."
 
-if ! rpm -qa | grep -qw php56; then
-    yum install -y php56
-    echo "php56 installed."
+if ! rpm -qa | grep -qw php55w; then
+    yum install -y php55w
+    echo "php55w installed."
 fi
 
-if ! rpm -qa | grep -qw php56-opcache; then
-    yum install -y php56-opcache
-    echo "php56-opcache installed."
+if ! rpm -qa | grep -qw php55w-opcache; then
+    yum install -y php55w-opcache
+    echo "php55w-opcache installed."
 fi
 
-if ! rpm -qa | grep -qw php56-common; then
-    yum install -y php56-common
-    echo "php56-common installed."
+if ! rpm -qa | grep -qw php55w-common; then
+    yum install -y php55w-common
+    echo "php55w-common installed."
 fi
 
-if ! rpm -qa | grep -qw php56-mysql; then
-    yum install -y php56-mysql
-    echo "php56-mysql installed."
+if ! rpm -qa | grep -qw php55w-mysql; then
+    yum install -y php55w-mysql
+    echo "php55w-mysql installed."
 fi
 
-if ! rpm -qa | grep -qw php56-pecl-memcache; then
-    yum install -y php56-pecl-memcache
-    echo "php56-pecl-memcache installed."
+if ! rpm -qa | grep -qw php55w-pecl-memcache; then
+    yum install -y php55w-pecl-memcache
+    echo "php55w-pecl-memcache installed."
 fi
 
-if ! rpm -qa | grep -qw php56-devel; then
-    sudo yum install -y php56-devel
-    echo "php56-devel installed."
+if ! rpm -qa | grep -qw php55w-devel; then
+    sudo yum install -y php55w-devel
+    echo "php55w-devel installed."
 fi
 
 if ! rpm -qa | grep -qw gcc; then
@@ -99,9 +99,9 @@ if ! rpm -qa | grep -qw gd-devel; then
     echo "gd-devel installed."
 fi
 
-if ! rpm -qa | grep -qw php56-gd; then
-    sudo yum install -y php56-gd
-    echo "php56-gd installed."
+if ! rpm -qa | grep -qw php55w-gd; then
+    sudo yum install -y php55w-gd
+    echo "php55w-gd installed."
 fi
 
 if [ ! -f /usr/lib64/php/modules/phalcon.so ]; then
