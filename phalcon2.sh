@@ -20,6 +20,8 @@ fi
 # Update CentOS
 ####################################################################################
 sudo yum update -y
+rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
 
 yum install -y httpd
@@ -39,34 +41,34 @@ mkdir /etc/httpd/conf/virtualhosts
 
 echo "Apache installed."
 
-if ! rpm -qa | grep -qw php55w; then
-    yum install -y php55w
-    echo "php55w installed."
+if ! rpm -qa | grep -qw php56w; then
+    yum install -y php56w
+    echo "php56w installed."
 fi
 
-if ! rpm -qa | grep -qw php55w-opcache; then
-    yum install -y php55w-opcache
-    echo "php55w-opcache installed."
+if ! rpm -qa | grep -qw php56w-opcache; then
+    yum install -y php56w-opcache
+    echo "php56w-opcache installed."
 fi
 
-if ! rpm -qa | grep -qw php55w-common; then
-    yum install -y php55w-common
-    echo "php55w-common installed."
+if ! rpm -qa | grep -qw php56w-common; then
+    yum install -y php56w-common
+    echo "php56w-common installed."
 fi
 
-if ! rpm -qa | grep -qw php55w-mysql; then
-    yum install -y php55w-mysql
-    echo "php55w-mysql installed."
+if ! rpm -qa | grep -qw php56w-mysql; then
+    yum install -y php56w-mysql
+    echo "php56w-mysql installed."
 fi
 
-if ! rpm -qa | grep -qw php55w-pecl-memcache; then
-    yum install -y php55w-pecl-memcache
-    echo "php55w-pecl-memcache installed."
+if ! rpm -qa | grep -qw php56w-pecl-memcache; then
+    yum install -y php56w-pecl-memcache
+    echo "php56w-pecl-memcache installed."
 fi
 
-if ! rpm -qa | grep -qw php55w-devel; then
-    sudo yum install -y php55w-devel
-    echo "php55w-devel installed."
+if ! rpm -qa | grep -qw php56w-devel; then
+    sudo yum install -y php56w-devel
+    echo "php56w-devel installed."
 fi
 
 if ! rpm -qa | grep -qw gcc; then
@@ -99,9 +101,9 @@ if ! rpm -qa | grep -qw gd-devel; then
     echo "gd-devel installed."
 fi
 
-if ! rpm -qa | grep -qw php55w-gd; then
-    sudo yum install -y php55w-gd
-    echo "php55w-gd installed."
+if ! rpm -qa | grep -qw php56w-gd; then
+    sudo yum install -y php56w-gd
+    echo "php56w-gd installed."
 fi
 
 if [ ! -f /usr/lib64/php/modules/phalcon.so ]; then
