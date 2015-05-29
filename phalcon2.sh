@@ -29,6 +29,7 @@ yum install -y re2c
 
 yum install -y httpd
 chkconfig httpd on
+systemctl enable httpd.service
 
 grep -l '#ServerName www.example.com:80' /etc/httpd/conf/httpd.conf | xargs sed -e 's/#ServerName www.example.com:80/ServerName localhost/' -i
 grep -l '#NameVirtualHost \*:80' /etc/httpd/conf/httpd.conf | xargs sed -e 's/#NameVirtualHost \*:80/NameVirtualHost \*:80/g' -i
